@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Baker Street</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="Katrina doyles portfolio des310">
+    <meta name="keywords" content="katrina, doyle, web, design, portfolio, kat, lurgan, derrymacash, armagh, northern ireland, ireland, uk, web design, interctive multimedia design, design, university of ulster, jordonstown, 22 years old, female,">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    <!--<script src="footPrints.js"></script>-->
+    
+<!--smooth scroller--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script><!--smooth scroller end--> 
+    
+<script>var NavWidth=$(window).width();
+		var NavHeight = $(window).height();
+		var x = NavWidth/2;
+		var y = NavHeight/2;
+		var rotation = 0;
+		var crit = 0;
+		function walk()
+		{	
+			//Rotation aléatoire
+			var random = Math.floor((Math.random()*360));
+			//Empêche le "personnage" de faire des angles >45 ou <-45
+			while((rotation-90)-random>45||(rotation-90)-random<-45) 
+			{
+				random = Math.floor((Math.random()*360));
+				//Vérifie si le "personnage" va sortir de l'écran
+				if(x + Math.cos((random/180)*Math.PI)*50<0||y + Math.sin((random/180)*Math.PI)*50<0||x + Math.cos((random/180)*Math.PI)*50>NavWidth||y +Math.sin((random/180)*Math.PI)*50>NavHeight )
+				{
+					//Si oui, il fait demi-tour
+					random += 180;
+					break;
+				}
+				//Vérifie si le programme n'est pas coincé dans la boucle, si oui il en
+				//sort au bout de 10 itérations
+				if(crit>10){break;}
+				
+				crit++;
+			}
+			crit=0;
+			//Détermine la future position en fonction de l'angle aléatoire précédent
+			x = x + Math.cos((random/190)*Math.PI)*60;
+			y = y +Math.sin((random/190)*Math.PI)*60;
+			//Ajustement de la rotation en fonction de l'inclinaison de l'image originale
+			rotation = random+90;
+			//Création de l'élément
+			var footprint = document.createElement('img');
+      		footprint.setAttribute("src","http://www.thecreator.fr/files/footprints-29.svg");
+			footprint.style.position="absolute";
+			footprint.style.left=x+"px";
+			footprint.style.top=y+"px";
+			footprint.className="footprint";
+			footprint.style.webkitTransform = "rotate("+rotation+"deg)";
+			//Ajout de l'élément dans le body
+			document.body.appendChild(footprint);
+		}
+		//Appel la fonction walk() toutes les secondes
+		setInterval(function(){walk();},1000);</script>
+
+    
+</head>
+      <nav>
+       <a href="#intro" class="">Baker Street</a>
+       <a href="#sherlock" class="">Sherlock Holmes</a>
+       <a href="#drWatson" class="">Dr Watson</a>
+       <a href="#moriarty">Other Stuff</a>
+       <a href="#irene" class="">Irene Adler</a>
+       <a href="#silverScreen">Silver Screen</a>
+  </nav>
+<header>
+        <h1>Heroes and Villians</h1>
+</header>
+    <body>
+        <main>
+            
+<section id="intro">
+<h2>221B Baker Street</h2>
+
+<p>Sir Arthur Conan Doyle's celebrated Holme's characters have lived a life beyond the printed page. Recent adaptations, brought to life on the silver screen, include Benedict Cumberbatch and Martin Freeman's portrayal in &#91;Sherlock&#93;<cite>(https://en.wikipedia.org/wiki/Sherlock_(TV_series)), and – more recently – Sir Ian McKellen's portrayal in &#91;Mr Holmes&#93;(https://en.wikipedia.org/wiki/Mr._Holmes).</cite></p>
+
+
+<p>Conan Doyle's writings lives on from generation to generation. As Scott Monty puts it:</p>
+
+<p>&#34;Every generation or so some kind of cycle happens, some big book or movie begins to start the process and then others seem to follow up,&#34;.
+- Scott Monty a member of the Sherlock Holmes Enthusiast Group &#39;Baker Street Irregulars&#39;</p>
+
+<p>This little web site is a homage to the Holmes&#39; story and was created as a piece of coursework for the &#91;BDes (Hons) Interaction Design&#93;(#) programme at the Belfast School of Art.</p>
+
+<p>Standing on the shoulders of giants we are indebted to Ethan Marcotte who kindly granted his permission to develop his original site, designed for A List Apart way back in 2010 when Marcotte coined the term &#91;Responsive Web Design&#93;<cite>(http://alistapart.com/article/responsive-web-design)</cite></p>
+</section>
+
+
+<section id="sherlock">
+<h2>Sherlock Holmes</h2>
+
+<p>Sherlock Holmes is a fictional private detective created by British author Sir Arthur Conan Doyle. Known as a &#34;consulting detective&#34; in the stories, Holmes is known for a proficiency with observation, forensic science, and logical reasoning that borders on the fantastic, which he employs when investigating cases for a wide variety of clients, including Scotland Yard. Amongst other foibles, Holmes had a penchant for papier maché.</p>
+
+<p>First appearing in print in 1887 (in A Study in Scarlet), the character's popularity became widespread with the first series of short stories in The Strand Magazine, beginning with &#34;A Scandal in Bohemia&#34; in 1891; additional tales appeared from then to 1927, eventually totalling four novels and 56 short stories.</p>
+
+<p>All but one are set in the Victorian or Edwardian periods, taking place between about 1880 to 1914. Most are narrated by the character of Holmes's friend and biographer Dr. Watson, who usually accompanies Holmes during his investigations and often shares quarters with him at the address of 221B Baker Street, London, where many of the stories begin.</p>
+</section>
+
+
+<section id="drWatson">
+<h2>Dr Watson</h2>
+
+
+<p>Dr John H. Watson is a medical doctor, formerly in the British Army. He was married to Mary Watson and is arguably the only friend and confidant of Sherlock Holmes.</p>
+
+<p>In the debut Holmes story A Study in Scarlet, Watson, as the narrator, describes meeting Holmes, their subsequent sharing of rooms at 221B Baker Street, his attempts to discover the profession of his taciturn companion, Holmes's eventual taking of Watson into his confidence, and the events surrounding their first case together. Watson describes Holmes and his methods in too romantic and sentimental a manner for Holmes' taste. In time, they become close friends. In The Sign of Four, John Watson met Mary Morstan, who became his wife. Mary seemed somewhat less sure of her husband, however, absentmindedly calling him "James" in the short story &#34;The Man with the Twisted Lip&#34;. This may be a simple typographical error, though some have speculated that it is a wifely reference to Watson's unknown middle name, which could have been &#34;Hamish&#34; (Scottish for &#34;James&#34;) Dorothy Sayers, creator of the detective Lord Peter Wimsey, also wrote several essays on Holmesian speculation, later published this theory in Unpopular Opinions.</p>
+
+<section id="moriarty">
+<h2>Moriarty</h2>
+
+<p>Professor James Moriarty, the arch-enemy of the famous Detective Sherlock Holmes, a mathematics professor turned the world's only consulting criminal. His genius is equal to, if not perhaps greater than, Holmes himself.</p>
+
+<p>He is the Napoleon of crime, Watson. He is the organizer of half that is evil and of nearly all that is undetected in this great city. He is a genius, a philosopher, an abstract thinker. He has a brain of the first order. He sits motionless, like a spider in the centre of its web, but that web has a thousand radiations, and he knows well every quiver of each of them. Sherlock Holmes speaking of Moriarty to Watson.</p>
+
+<p>Despite only appearing in two stories, Moriarty has been proven to be the most dangerous of all criminals that Holmes has ever encountered. In the short story &#34;The Adventure of the Final Problem&#34;, during a fight with Holmes above the Reichenbach Falls, Moriarty fell to his death.</p>
+</section>
+
+
+<section id="irene">
+<h2>Irene Adler</h2>
+
+<p>Irene Adler, professionally known as &#34;The Woman&#34;, is a brilliant dominatrix who has an apparently romantic attraction to Sherlock Holmes.</p>
+
+<p>Whilst Mycroft is telling Sherlock about Irene, he states that she is a dominatrix who gives out &#39;recreational scolding&#39; to people. She has been in the middle of two political scandals in recent years, one of them involving a famous author, in which she had an affair with both sides.</p>
+
+<p>She is brought to Sherlock's attention when he and John are summoned to Buckingham Palace by Mycroft and are asked to take on a case of national importance. Irene had taken compromising images of a young female member of the British Royal family during a dominatrix session.</p>
+
+<p>Even though Irene does not want money or power for the pictures, Sherlock is tasked in getting them back. She is using them, and other information on her mobile phone, for her &#34;protection&#34;.</p>
+</section>
+
+<section id="silverScreen">
+<h2>Adaptations on the Silver Screen</h2>
+
+<p>Sir Arthur Conan Doyle's celebrated Holme's characters have lived a life beyond the printed page. Recent adaptations, brought to life on the silver screen, include Benedict Cumberbatch and Martin Freeman's portrayal in &#91;Sherlock&#93;(&#35;), and – more recently – Sir Ian McKellen's portrayal in &#91;Mr Holmes&#93;(&#35;).</p>
+</section>
+
+            <div id="map">
+<iframe width="100%" height="500px" src="http://maps.stamen.com/toner/embed#14/37.8024/-122.2645"></iframe>
+                </div>
+
+<cite>The content on this page draws on copy from Wikipedia. This has been reworked to incorporate a comprehensive set of HTML5 elements to ensure semantics is full explored.</cite>
+
+<cite>Copyright &#169; 2016, Christopher Murphy, #ixdbelfast</cite>
+            
+       </main>
+    </body>
+</html>
