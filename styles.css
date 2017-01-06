@@ -1,0 +1,130 @@
+
+
+header {
+    width: 100%;
+    height: 750px;
+    margin:0 auto;
+    background-image: url('vintage.jpg');
+    background-repeat: no-repeat;
+}
+
+
+body {
+    width: 100%;
+    margin:auto 0;
+    /*font-family: 'Oswald';*/
+    line-height: 1.5;
+}
+/*
+h1 {
+   font-size: 50px;
+   color: #fff;
+   text-align: center;
+   margin: 0 auto;
+   padding-top:350px;
+}*/
+
+h1 {
+    padding-top:140px;
+    width:690px;
+    margin: 0 auto;
+ 	font-size: 8em;
+ 	line-height: 1;
+ 	text-transform: uppercase;
+ 	-webkit-mask-image: url(img/knockout.png);
+	-o-mask-image: url(img/knockout.png);
+	-moz-mask-image: url(img/knockout.png);
+	-ms-mask-image: url(img/knockout.png);
+	mask-image: url(img/knockout.png);
+}
+
+
+h2 {
+   font-size: 50px;
+   color: #000;
+   text-align: center;
+   margin: 0 auto;
+   padding-top:50px;
+}
+
+h3 {
+   font-size: 30px;
+   color: #000;
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 30px;
+}
+
+p {
+   width: 600px;
+   margin: auto;
+   text-align: justify;
+   margin-bottom: 30px;
+   font-size:20px;  
+}
+
+#map {
+    width: 100%;
+}
+
+footer {
+     width: 600px;
+    margin: auto;
+}
+
+
+
+nav {
+  position: fixed;
+  bottom: 30%; right: 0px;
+}
+
+nav a {
+  display: inline-block;
+  float: right; clear: both;
+  margin: 2px 0px;
+  padding: 5px 20px 5px 10px;
+  color: #FFF;
+  font: 16px 'Ubuntu', Helvetica, Arial, sans-serif;
+  background: rgba(95,55,17,0.7);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.1s linear 0s;
+}
+
+nav a:hover, nav a.active {
+  background: #000;
+  font-size: 20px;
+}
+
+.footprint
+			{
+				opacity: 0;
+				animation-duration: 5s;
+			    animation-name: fadeOut;
+			    -moz-animation-duration: 5s;
+			    -moz-animation-name: fadeOut;
+				-webkit-animation-duration: 5s;
+			    -webkit-animation-name: fadeOut;
+			}
+
+			@keyframes fadeOut 
+			{
+				0%{opacity: 1;}
+			    80%{opacity: 1;}
+			    100%{opacity: 0;}
+			}
+
+			@-moz-keyframes fadeOut 
+			{
+				0%{opacity: 1;}
+			    80%{opacity: 1;}
+			    100%{opacity: 0;}
+			}
+
+			@-webkit-keyframes fadeOut 
+			{
+				0%{opacity: 1;}
+			    80%{opacity: 1;}
+			    100%{opacity: 0;}
+			}
